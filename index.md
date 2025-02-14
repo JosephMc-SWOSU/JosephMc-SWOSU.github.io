@@ -1,5 +1,5 @@
 ---
-title: Joseph
+title: About
 ---
 # About JosephMc-SWOSU
 
