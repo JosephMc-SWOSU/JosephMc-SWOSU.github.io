@@ -1,15 +1,20 @@
-# Welcome to My GitHub Pages Site
+---
+layout: default
+title: about
+---
 
-Hello! I'm Joseph McPhearson, and this is my personal website. Here, you'll find information about my projects, interests, and more.
+# Welcome to My Website
 
-## About Me
-
-I am a beginner developer at Southwestern Oklahoma State University. This site is a space for me to share my work and connect with others.
+Hello! I'm Joseph McPhearson. Welcome to my personal website. Here you can find information about my projects, blog posts, and more.
 
 ## Projects
 
-- **Project 1**: A brief description of your first project.
-- **Project 2**: A brief description of your second project.
-- **Project 3**: A brief description of your third project.
+- [Project 1](#)
+- [Project 2](#)
+- [Project 3](#)
 
-Feel free to explore and reach out if you have any questions or comments!
+## Blog
+
+- [Blog Post 1](#)
+- [Blog Post 2](#)
+- [Blog Post 3](#)
