@@ -7,7 +7,7 @@ Currently I am in the middle of building a turbo powered 1.6 Mazda Miata :)
 
 ## Top Features
 * Small
-*Cute
+* Cute
 * ̶f̶a̶s̶t̶  (not yet)
 <br>
 
