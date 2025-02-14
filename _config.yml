@@ -24,21 +24,14 @@ author:
 social:
   github: josephmc-swosu
 
+# Navigation links
+nav:
+  - title: "Home"
+    url: "/"
+  - title: "About"
+    url: "/about/"
+
 plugins:
   - jekyll-include-cache
   - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-feed
-  - jekyll-paginate
-  - jekyll-archives
-  - jekyll-avatar
-  - jekyll-coffeescript
-  - jekyll-gist
-  - jekyll-github-metadata
-  - jekyll-optional-front-matter
-  - jekyll-readme-index
-  - jekyll-redirect-from
-  - jekyll-relative-links
-  - jekyll-titles-from-headings
-  - jekyll-mentions
   - jekyll-remote-theme
