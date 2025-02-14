@@ -6,7 +6,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://JosephMc-SWOSU.github.io" # the base hostname & protocol for your site
 
 # Minimal Mistakes theme settings
-theme: minimal-mistakes-jekyll
+theme: mmistakes/minimal-mistakes
 
 # Site author
 author:
