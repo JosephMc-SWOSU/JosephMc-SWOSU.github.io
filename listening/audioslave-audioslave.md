@@ -7,26 +7,27 @@
     .hover-container {
       position: relative;
       display: inline-block;
+      width: 200px; /* Match the width of the image */
+      height: 200px; /* Match the height of the image */
     }
 
     .hover-container img {
-      width: 200px;
-      height: 200px;
+      width: 100%; /* Ensure the image fills the container */
+      height: 100%; /* Ensure the image fills the container */
     }
 
     .hover-text {
       visibility: hidden;
-      width: 220px;
-      background-color: black;
+      width: 100%; /* Match the width of the container */
+      background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
       color: white;
       text-align: center;
       border-radius: 6px;
       padding: 8px 0;
       position: absolute;
       z-index: 1;
-      bottom: 125%; /* Position the tooltip above the image */
-      left: 50%;
-      margin-left: -110px; /* Center the tooltip */
+      bottom: 0; /* Position the tooltip at the bottom of the image */
+      left: 0;
       opacity: 0;
       transition: opacity 0.3s;
     }
