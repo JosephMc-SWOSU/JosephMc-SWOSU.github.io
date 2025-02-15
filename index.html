@@ -324,26 +324,26 @@
       duration: 5000,
     });
 
-const footer = document.createElement("footer");
-footer.className = "mt-8 mb-4";
-const footerContent = document.createElement("div");
-footerContent.className = "flex items-center justify-between";
-footer.appendChild(footerContent);
+  const footer = document.createElement("footer");
+  footer.className = "mt-8 mb-4";
+  const footerContent = document.createElement("div");
+  footerContent.className = "flex flex-col items-center justify-center";
+  footer.appendChild(footerContent);
 
-const madeWith = document.createElement("div");
-madeWith.className = "hidden md:flex";
-madeWith.innerHTML = '“The world is waiting for you, ready to be changed.”  - Barack Obama';
-footerContent.appendChild(madeWith);
+  const madeWith = document.createElement("div");
+  madeWith.className = "text-center";
+  madeWith.innerHTML = '<b>“The world is waiting for you, ready to be changed.” - Barack Obama</b>';
+  footerContent.appendChild(madeWith);
 
-const elevatorBtnDiv = document.createElement("div");
-elevatorBtnDiv.innerHTML = 'Going up?&nbsp;&nbsp;<i class="fas fa-elevator"></i>&nbsp;&nbsp;';
-elevatorBtnDiv.className = "text-center flex justify-center items-center cursor-pointer mt-4";
-elevatorBtnDiv.onclick = () => {
-  elevator.elevate();
-};
+  const elevatorBtnDiv = document.createElement("div");
+  elevatorBtnDiv.innerHTML = 'Going up?&nbsp;&nbsp;<i class="fas fa-elevator"></i>&nbsp;&nbsp;';
+  elevatorBtnDiv.className = "text-center flex justify-center items-center cursor-pointer mt-4";
+  elevatorBtnDiv.onclick = () => {
+    elevator.elevate();
+  };
 
-footerContent.appendChild(elevatorBtnDiv);
-document.body.appendChild(footer);
+  footerContent.appendChild(elevatorBtnDiv);
+  document.body.appendChild(footer);
   </script>
     <style>
       @keyframes pulsate {
