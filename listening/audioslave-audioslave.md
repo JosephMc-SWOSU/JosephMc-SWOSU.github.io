@@ -1,5 +1,5 @@
-![Audioslave - Audioslave](https://upload.wikimedia.org/wikipedia/en/a/ac/Audioslave_-_Audioslave.jpg)
+<a href="https://open.spotify.com/album/78guAsers0klWl6RwzgDLd?si=p9FT--SZQEGQFjqe_j53iA" title="Audioslave - Audioslave">
+  <img src="https://upload.wikimedia.org/wikipedia/en/a/ac/Audioslave_-_Audioslave.jpg" width="200" height="200">
+</a>
 
-**Audioslave - Audioslave**
 
-[Listen on Spotify](https://open.spotify.com/album/78guAsers0klWl6RwzgDLd?si=p9FT--SZQEGQFjqe_j53iA)
