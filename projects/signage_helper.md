@@ -45,52 +45,54 @@ Enter the old signage message and the new signage message to determine which let
 </style>
 
 <script>
-    document.getElementById('signage-form').addEventListener('submit', function(event) {
-        event.preventDefault();
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('signage-form').addEventListener('submit', function(event) {
+            event.preventDefault();
 
-        const oldMessage = document.getElementById('old_message').value;
-        const newMessage = document.getElementById('new_message').value;
+            const oldMessage = document.getElementById('old_message').value;
+            const newMessage = document.getElementById('new_message').value;
 
-        console.log('Old Message:', oldMessage);
-        console.log('New Message:', newMessage);
+            console.log('Old Message:', oldMessage);
+            console.log('New Message:', newMessage);
 
-        const neededLetters = getNeededLetters(oldMessage, newMessage);
+            const neededLetters = getNeededLetters(oldMessage, newMessage);
 
-        console.log('Needed Letters:', neededLetters);
+            console.log('Needed Letters:', neededLetters);
 
-        const resultsDiv = document.getElementById('results');
-        resultsDiv.innerHTML = '<h4>Letters needed to update the signage:</h4>';
-        const ul = document.createElement('ul');
-        for (const [letter, count] of Object.entries(neededLetters)) {
-            const li = document.createElement('li');
-            li.textContent = `${letter}: ${count}`;
-            ul.appendChild(li);
-        }
-        resultsDiv.appendChild(ul);
-    });
-
-    function getNeededLetters(oldMessage, newMessage) {
-        oldMessage = oldMessage.replace(/\s+/g, '').toLowerCase();
-        newMessage = newMessage.replace(/\s+/g, '').toLowerCase();
-
-        const oldCounter = {};
-        const newCounter = {};
-
-        for (const char of oldMessage) {
-            oldCounter[char] = (oldCounter[char] || 0) + 1;
-        }
-
-        for (const char of newMessage) {
-            newCounter[char] = (newCounter[char] || 0) + 1;
-        }
-
-        const neededLetters = {};
-        for (const [char, count] of Object.entries(newCounter)) {
-            if (count > (oldCounter[char] || 0)) {
-                neededLetters[char] = count - (oldCounter[char] || 0);
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = '<h4>Letters needed to update the signage:</h4>';
+            const ul = document.createElement('ul');
+            for (const [letter, count] of Object.entries(neededLetters)) {
+                const li = document.createElement('li');
+                li.textContent = `${letter}: ${count}`;
+                ul.appendChild(li);
             }
-        }
+            resultsDiv.appendChild(ul);
+        });
 
-        return neededLetters;
-    }
+        function getNeededLetters(oldMessage, newMessage) {
+            oldMessage = oldMessage.replace(/\s+/g, '').toLowerCase();
+            newMessage = newMessage.replace(/\s+/g, '').toLowerCase();
+
+            const oldCounter = {};
+            const newCounter = {};
+
+            for (const char of oldMessage) {
+                oldCounter[char] = (oldCounter[char] || 0) + 1;
+            }
+
+            for (const char of newMessage) {
+                newCounter[char] = (newCounter[char] || 0) + 1;
+            }
+
+            const neededLetters = {};
+            for (const [char, count] of Object.entries(newCounter)) {
+                if (count > (oldCounter[char] || 0)) {
+                    neededLetters[char] = count - (oldCounter[char] || 0);
+                }
+            }
+
+            return neededLetters;
+        }
+    });
 </script>
