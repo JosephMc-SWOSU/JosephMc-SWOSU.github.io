@@ -45,6 +45,8 @@ Enter the old signage message and the new signage message to determine which let
 </style>
 
 <script>
+    console.log('Script loaded'); // Initial log to verify script execution
+
     document.addEventListener('DOMContentLoaded', function() {
         console.log('DOM fully loaded and parsed');
         const form = document.getElementById('signage-form');
