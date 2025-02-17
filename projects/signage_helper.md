@@ -51,7 +51,12 @@ Enter the old signage message and the new signage message to determine which let
         const oldMessage = document.getElementById('old_message').value;
         const newMessage = document.getElementById('new_message').value;
 
+        console.log('Old Message:', oldMessage);
+        console.log('New Message:', newMessage);
+
         const neededLetters = getNeededLetters(oldMessage, newMessage);
+
+        console.log('Needed Letters:', neededLetters);
 
         const resultsDiv = document.getElementById('results');
         resultsDiv.innerHTML = '<h4>Letters needed to update the signage:</h4>';
