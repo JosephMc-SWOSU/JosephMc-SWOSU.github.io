@@ -151,7 +151,8 @@
     });
 
     const postsList = document.getElementById('posts-list');
-    });
+    const projectsList = document.getElementById('projects-list');
+    const converter = new showdown.Converter();
     const baseUrl = "https://api.github.com/repos/josephmc-swosu/josephmc-swosu.github.io/contents/";
     const folders = ['posts', 'projects', 'listening'];
 
