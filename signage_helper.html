@@ -5,6 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.3/dist/tailwind.min.css" />
     <title>Signage Letter Helper</title>
+    <style>
+        .dark-mode .bg-white {
+            background-color: #1a1a1a;
+        }
+
+        .dark-mode .text-gray-700 {
+            color: #f8f8f8;
+        }
+
+        .dark-mode .border {
+            border-color: #333333;
+        }
+
+        .dark-mode .bg-blue-500 {
+            background-color: #4a90e2;
+        }
+
+        .dark-mode .text-white {
+            color: #f8f8f8;
+        }
+    </style>
 </head>
 <body class="bg-white relative dark-mode">
     <div class="flex flex-col items-center justify-center min-h-screen">
@@ -69,6 +90,21 @@
 
             return neededLetters;
         }
+
+        // Dark mode toggle
+        document.addEventListener('DOMContentLoaded', () => {
+            const darkModeToggle = document.createElement('button');
+            darkModeToggle.id = 'dark-mode-toggle';
+            darkModeToggle.className = 'ml-4 p-2 text-black rounded shadow-md';
+            darkModeToggle.innerText = '🌓';
+            document.body.appendChild(darkModeToggle);
+
+            darkModeToggle.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+                const isDarkModeOn = document.body.classList.contains('dark-mode');
+                darkModeToggle.innerText = isDarkModeOn ? '☀️' : '🌑';
+            });
+        });
     </script>
 </body>
 </html>
