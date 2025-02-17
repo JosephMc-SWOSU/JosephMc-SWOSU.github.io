@@ -46,8 +46,11 @@ Enter the old signage message and the new signage message to determine which let
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        document.getElementById('signage-form').addEventListener('submit', function(event) {
+        console.log('DOM fully loaded and parsed');
+        const form = document.getElementById('signage-form');
+        form.addEventListener('submit', function(event) {
             event.preventDefault();
+            console.log('Form submitted');
 
             const oldMessage = document.getElementById('old_message').value;
             const newMessage = document.getElementById('new_message').value;
