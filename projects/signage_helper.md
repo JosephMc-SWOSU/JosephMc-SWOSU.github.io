@@ -35,6 +35,7 @@
                 <div class="mb-4">
                     <label for="old_message" class="block text-gray-700">Old Signage Message:</label>
                     <input type="text" id="old_message" name="old_message" class="w-full px-3 py-2 border rounded" required>
+                    <button id="dark-mode-toggle" class="ml-4 p-2 text-black rounded shadow-md">🌓</button>
                 </div>
                 <div class="mb-4">
                     <label for="new_message" class="block text-gray-700">New Signage Message:</label>
@@ -92,11 +93,7 @@
         }
 
         // Dark mode toggle
-        document.addEventListener('DOMContentLoaded', () => {
-            const darkModeToggle = document.createElement('button');
-            darkModeToggle.id = 'dark-mode-toggle';
-            darkModeToggle.className = 'ml-4 p-2 text-black rounded shadow-md';
-            darkModeToggle.innerText = '🌓';
+            const darkModeToggle = document.getElementById('dark-mode-toggle');
             document.body.appendChild(darkModeToggle);
 
             darkModeToggle.addEventListener('click', () => {
