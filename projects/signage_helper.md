@@ -18,6 +18,32 @@ Enter the old signage message and the new signage message to determine which let
 
 <div id="results"></div>
 
+<style>
+    body.dark-mode {
+        background-color: #1a1a1a;
+        color: #f8f8f8;
+    }
+
+    body.dark-mode input {
+        background-color: #333333;
+        color: #f8f8f8;
+        border: 1px solid #555555;
+    }
+
+    body.dark-mode label {
+        color: #f8f8f8;
+    }
+
+    body.dark-mode button {
+        background-color: #4a90e2;
+        color: #f8f8f8;
+    }
+
+    body.dark-mode #results h4 {
+        color: #f8f8f8;
+    }
+</style>
+
 <script>
     document.getElementById('signage-form').addEventListener('submit', function(event) {
         event.preventDefault();
