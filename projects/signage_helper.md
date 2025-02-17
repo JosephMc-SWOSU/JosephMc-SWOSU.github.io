@@ -74,6 +74,9 @@ Enter the old signage message and the new signage message to determine which let
             oldMessage = oldMessage.replace(/\s+/g, '').toLowerCase();
             newMessage = newMessage.replace(/\s+/g, '').toLowerCase();
 
+            console.log('Processed Old Message:', oldMessage);
+            console.log('Processed New Message:', newMessage);
+
             const oldCounter = {};
             const newCounter = {};
 
@@ -85,12 +88,17 @@ Enter the old signage message and the new signage message to determine which let
                 newCounter[char] = (newCounter[char] || 0) + 1;
             }
 
+            console.log('Old Counter:', oldCounter);
+            console.log('New Counter:', newCounter);
+
             const neededLetters = {};
             for (const [char, count] of Object.entries(newCounter)) {
                 if (count > (oldCounter[char] || 0)) {
                     neededLetters[char] = count - (oldCounter[char] || 0);
                 }
             }
+
+            console.log('Calculated Needed Letters:', neededLetters);
 
             return neededLetters;
         }
