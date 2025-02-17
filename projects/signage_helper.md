@@ -4,7 +4,7 @@
 Enter the old signage message and the new signage message to determine which letters you need to bring to update the signage.
 
 ## Form
-<form id="signage-form">
+<form id="signage-form" onsubmit="return false;">
     <div>
         <label for="old_message">Old Signage Message:</label>
         <input type="text" id="old_message" name="old_message" required>
