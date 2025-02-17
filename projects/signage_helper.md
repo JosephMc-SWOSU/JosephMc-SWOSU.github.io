@@ -1,3 +1,5 @@
+# Signage Letter Helper
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -93,7 +95,11 @@
         }
 
         // Dark mode toggle
-            const darkModeToggle = document.getElementById('dark-mode-toggle');
+        document.addEventListener('DOMContentLoaded', () => {
+            const darkModeToggle = document.createElement('button');
+            darkModeToggle.id = 'dark-mode-toggle';
+            darkModeToggle.className = 'ml-4 p-2 text-black rounded shadow-md';
+            darkModeToggle.innerText = '🌓';
             document.body.appendChild(darkModeToggle);
 
             darkModeToggle.addEventListener('click', () => {
