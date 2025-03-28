@@ -458,5 +458,19 @@
       return neededLetters;
     }
   </script>
+  <script>
+    const darkModeToggle = document.getElementById("dark-mode-toggle");
+    const signageIframe = document.querySelector("iframe[title='Signage Helper']");
+
+    darkModeToggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+
+      const isDarkModeOn = document.body.classList.contains("dark-mode");
+      darkModeToggle.innerText = isDarkModeOn ? "☀️" : "🌑";
+
+      // Send a message to the iframe about the dark mode state
+      signageIframe.contentWindow.postMessage({ darkMode: isDarkModeOn }, "*");
+    });
+  </script>
 </body>
 </html>
