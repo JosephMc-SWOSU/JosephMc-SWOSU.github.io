@@ -5,23 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.3/dist/tailwind.min.css" />
   <title>Signage Helper</title>
-  <style>
-    body.dark-mode {
-      background-color: #1a1a1a;
-      color: #f8f8f8;
-    }
-
-    body.dark-mode input {
-      background-color: #333;
-      color: #f8f8f8;
-      border-color: #555;
-    }
-
-    body.dark-mode button {
-      background-color: #4a90e2;
-      color: #f8f8f8;
-    }
-  </style>
 </head>
 <body>
   <div id="signage-helper-container" class="w-full px-4 py-5">
@@ -81,20 +64,6 @@
 
       return neededLetters;
     }
-  </script>
-  <script>
-    // Listen for messages from the parent window
-    window.addEventListener("message", (event) => {
-      if (event.data.darkMode !== undefined) {
-        const isDarkModeOn = event.data.darkMode;
-
-        if (isDarkModeOn) {
-          document.body.classList.add("dark-mode");
-        } else {
-          document.body.classList.remove("dark-mode");
-        }
-      }
-    });
   </script>
 </body>
 </html>
