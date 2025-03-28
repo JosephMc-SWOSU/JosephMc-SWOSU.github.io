@@ -159,14 +159,9 @@
       <!-- Fetched Listening Markdown files will be displayed here -->
     </div>
   </div>
-  <div id="signage-helper-container" class="w-full px-4 py-5"></div>
-  <script>
-    fetch('signage-helper.html')
-      .then(response => response.text())
-      .then(html => {
-        document.getElementById('signage-helper-container').innerHTML = html;
-      });
-  </script>
+  <div id="signage-helper-container" class="w-full px-4 py-5">
+    <iframe src="signage-helper.html" class="w-full h-96 border rounded" title="Signage Helper"></iframe>
+  </div>
   <button id="scroll-down-btn" class="fixed bottom-4 left-1/2 text-black p-2 rounded shadow-md opacity-80 transition-colors duration-200 ease-in-out dark:bg-gray-800 dark:text-white">
     <i class="fa-solid fa-v"></i>
   </button>
